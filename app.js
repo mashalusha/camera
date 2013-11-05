@@ -27,7 +27,7 @@ sb.addSubscribe("capture", "boolean");	// subscription for taking snapshot
 sb.addPublish("image", "binary");		// publish the serialized binary image data
 
 
-sb.onBooleanMessage = onBooleanMessage;	
+sb.onBooleanMessage = onBooleanMessage;	           
 sb.onOpen = onOpen;
 
 // connect to spacbrew
