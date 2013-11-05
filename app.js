@@ -1,5 +1,5 @@
-var RaspiCam = require("raspicam"),
-	colors = require("colors"),
+var RaspiCam = require("raspicam"),         //THis creates a variable, its not an object becasue it doesn't have {}
+	colors = require("colors"),          //I am not sure why or how this works
 	Spacebrew = require('./sb-1.3.0').Spacebrew,
 	sb,
 	camera,
@@ -44,7 +44,7 @@ function onOpen() {
 	console.log("connected at: " + image_timestamp + "\n");
 
 	// initialize RaspiCam timelapse
-	camera = new RaspiCam({
+	camera = new RaspiCam({       //THIS IS AN OBJECT!
 		mode: "photo",
 		output: image_path + "image.png", // will change this before taking a picture
 		encoding: "png",
@@ -55,7 +55,7 @@ function onOpen() {
 		timeout: 0 // take snapshot immediately with 0 delay
 	});
 
-	camera.on("start", function( err, timestamp ){
+	camera.on("start", function( err, timestamp ){             
 		console.log([
 			// Timestamp
 			String(+new Date()).grey,
